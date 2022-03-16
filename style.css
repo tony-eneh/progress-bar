@@ -1,0 +1,114 @@
+/* @import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Source+Sans+Pro&display=swap'); */
+
+:root {
+  --height: 3rem;
+  --spacing: 2px;
+  --bar-width: 1000px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.bar {
+  width: var(--bar-width);
+  /* display: flex; */
+  background-color: rgba(100, 100, 100, 0.2);
+  border-radius: calc(var(--height) / 2);
+  margin: calc(var(--height) / 2);
+}
+
+.bar .inner {
+  width: 50%;
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0) 5px,
+      rgba(255, 255, 255, 0.3) 5px,
+      rgba(255, 255, 255, 0.3) 10px
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0) 75%
+    );
+
+  display: flex;
+  justify-content: flex-end;
+  height: calc(100% - 2 * var(--spacing));
+  position: relative;
+  border-radius: calc(var(--height) / 2);
+  box-shadow: 0 var(--spacing) var(--spacing) rgba(0, 0, 0, 0.5);
+}
+
+.bar .inner .shadows {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: calc(var(--height) / 2);
+  border-top: var(--spacing) solid white;
+  /* border-bottom: var(--spacing) solid rgba(0, 0, 0, 0.3); */
+}
+
+.percent {
+  text-shadow: 0 1px 1px white;
+  font-size: 1.5rem;
+  padding-right: calc(var(--bar-width) / 50);
+  line-height: var(--height);
+}
+
+/* green */
+.bar .green {
+  background-color: rgb(133, 218, 7);
+  border: var(--spacing) solid rgb(96, 161, 4);
+}
+
+.green .percent {
+  color: rgb(90 105 61);
+}
+
+/* red */
+.bar .red {
+  background-color: rgb(218, 7, 7, 0.8);
+  border: var(--spacing) solid rgb(122, 4, 4);
+}
+
+.red .percent {
+  color: rgb(138, 8, 8);
+}
+
+/* white */
+.bar .white {
+  background-color: rgb(255, 255, 255);
+  border: var(--spacing) solid rgb(216, 216, 216);
+}
+
+.white .percent {
+  color: rgb(85, 85, 84);
+}
+
+/* blue */
+.bar .blue {
+  background-color: rgb(7, 141, 218);
+  border: var(--spacing) solid rgb(5, 58, 119);
+}
+
+.blue .percent {
+  color: rgb(35, 34, 87);
+}
+
+/* yellow */
+.bar .yellow {
+  background-color: rgb(244 198 98);
+  border: var(--spacing) solid rgb(103, 110, 6);
+}
+
+.yellow .percent {
+  color: rgb(99, 104, 34);
+}
