@@ -8,6 +8,7 @@
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
@@ -111,4 +112,15 @@ body {
 
 .yellow .percent {
   color: rgb(99, 104, 34);
+}
+
+.finish {
+  border: none;
+  border-radius: calc(var(--height) / 2);
+  background-image: none;
+  background-color: rgb(98, 97, 99);
+  color: white;
+  font-size: 1rem;
+  padding: calc(var(--height) / 4);
+  font-family: 'Courier New', Courier, monospace;
 }
