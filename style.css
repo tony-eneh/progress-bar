@@ -87,6 +87,7 @@ body {
 
 /* white */
 .bar .white {
+  background-image: none;
   background-color: rgb(255, 255, 255);
   border: var(--spacing) solid rgb(216, 216, 216);
 }
